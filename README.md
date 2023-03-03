@@ -11,6 +11,9 @@
 Uses [KVv2](https://developer.hashicorp.com/vault/docs/secrets/kv#kv-version-2)
 
 ## Usage
+
+See [example-configuration.yml](./example-configuration.yml) for configuration example
+
 ```text
 Usage of vault-pgpass:
   -f string
