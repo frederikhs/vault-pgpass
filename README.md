@@ -39,3 +39,17 @@ vault-pgpass -f configuration.yml -t <TOKEN> -o .pgpass
 ```
 
 Omitting `-o` writes to stdout
+
+## Installation
+
+### Linux amd64
+
+```bash
+# install
+curl -L https://github.com/frederikhs/vault-pgpass/releases/latest/download/vault-pgpass_Linux_x86_64.tar.gz -o vault-pgpass.tar.gz
+tar -xvf vault-pgpass.tar.gz
+sudo mv vault-pgpass /usr/local/bin/vault-pgpass
+
+# clean up
+rm vault-pgpass.tar.gz
+```
