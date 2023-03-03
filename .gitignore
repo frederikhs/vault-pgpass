@@ -1,0 +1,5 @@
+/*.yml
+!example-configuration.yml
+*pgpass*
+.idea
+vault-pgpass

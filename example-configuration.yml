@@ -1,0 +1,14 @@
+address: https://127.0.0.1:8200
+hosts:
+  - secretPath: production/postgres/X/X
+    hostname: db.example.com
+    port: 5432
+    database: postgres
+    usernameKey: username-key
+    passwordKey: password-key
+  - secretPath: production/postgres/Y/Y
+    hostname: db2.example.com
+    port: 5432
+    database: postgres
+    usernameKey: username-key
+    passwordKey: password-key

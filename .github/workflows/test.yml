@@ -1,0 +1,26 @@
+name: test
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  test:
+    name: test
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go mod download
+      - uses: golangci/golangci-lint-action@v3
+        with:
+          version: latest
+          args: --timeout=3m
+      - run: go vet ./...
+      - run: go test -race ./...
+      - run: go build
